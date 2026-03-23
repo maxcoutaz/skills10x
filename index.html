@@ -6,49 +6,87 @@
     <title>skills10x | AI Agent Agency</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background: #000; color: #fff; }
+        <style>
+        body { font-family: 'Inter', sans-serif; background: #000; color: #fff; overflow-x: hidden; }
         .grid-bg { background-image: radial-gradient(#1a1a1a 1px, transparent 1px); background-size: 30px 30px; }
         .card-glow:hover { border-color: #3b82f6; box-shadow: 0 0 30px rgba(59, 130, 246, 0.1); transform: translateY(-4px); }
+        
+        /* Toast Animation */
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            border: 1px solid #3b82f6;
+            border-radius: 50px;
+            padding: 12px 24px;
+            position: fixed;
+            z-index: 100;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
     </style>
 </head>
 <body class="grid-bg min-h-screen">
+
+    <!-- Toast Notification -->
+    <div id="toast">Email copied to clipboard!</div>
     <nav class="p-6 flex justify-between items-center border-b border-white/5 backdrop-blur-md sticky top-0 z-50 bg-black/50">
         <div class="text-2xl font-black tracking-tighter italic">SKILLS<span class="text-blue-500">10X</span></div>
-        <div class="flex gap-6 text-xs font-bold uppercase tracking-widest text-gray-400">
+        <!--<div class="flex gap-6 text-xs font-bold uppercase tracking-widest text-gray-400">
             <a href="#" class="hover:text-blue-500">Solutions</a>
             <a href="#" class="hover:text-blue-500">Agency</a>
-            <!--<a href="mailto:hello@skills10x.com" class="text-white border border-white/20 px-4 py-2 rounded-full hover:bg-white hover:text-black transition">Inquire</a>-->
-        </div>
+            <a href="mailto:hello@skills10x.com" class="text-white border border-white/20 px-4 py-2 rounded-full hover:bg-white hover:text-black transition">Inquire</a>
+        </div>-->
     </nav>
 
     <header class="py-32 text-center px-6">
-        <h1 class="text-6xl md:text-8xl font-black mb-8 tracking-tighter leading-none">THE NEW <br><span class="text-blue-600">STANDARD</span> OF OUTPUT.</h1>
+        <h1 class="text-6xl md:text-8xl font-black mb-8 tracking-tighter leading-none">MARKTECH <br><span class="text-blue-600">SKILLS</span> ON DEMAND.</h1>
         <p class="text-gray-500 max-w-2xl mx-auto text-lg md:text-xl font-light">We deploy specialized AI agents that act as force multipliers for your marketing team.</p>
     </header>
 
     <main class="max-w-6xl mx-auto px-6 pb-32">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             
-            <!-- Skill 1 -->
-            <a href="radar.html" class="card-glow p-10 bg-zinc-950 border border-white/10 rounded-3xl transition-all duration-300">
-                <div class="text-blue-500 font-mono text-xs mb-8">SKILL_01</div>
-                <h3 class="text-2xl font-bold mb-3">Competitor Radar</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Automated 24/7 intelligence gathering on rival messaging and pricing.</p>
-            </a>
-
-            <!-- Skill 2 -->
+              <!-- Skill 1 -->
             <a href="faq.html" class="card-glow p-10 bg-zinc-950 border border-white/10 rounded-3xl transition-all duration-300">
-                <div class="text-blue-500 font-mono text-xs mb-8">SKILL_02</div>
+                <div class="text-blue-500 font-mono text-xs mb-8">SKILL_01</div>
                 <h3 class="text-2xl font-bold mb-3">SmartFAQ</h3>
                 <p class="text-gray-500 text-sm leading-relaxed">RAG-powered support agent trained on your unique technical documentation.</p>
             </a>
 
+            <!-- Skill 2 -->
+            <a href="radar.html" class="card-glow p-10 bg-zinc-950 border border-white/10 rounded-3xl transition-all duration-300">
+                <div class="text-blue-500 font-mono text-xs mb-8">SKILL_02</div>
+                <h3 class="text-2xl font-bold mb-3">Competitor Radar</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Intelligence competitor messaging and pricing. Automated weekly report</p>
+            </a>
+
             <!-- Skill 3 -->
-            <a href="brand.html" class="card-glow p-10 bg-zinc-950 border border-white/10 rounded-3xl transition-all duration-300">
+            <a href="dashboard.html" class="card-glow p-10 bg-zinc-950 border border-white/10 rounded-3xl transition-all duration-300">
                 <div class="text-blue-500 font-mono text-xs mb-8">SKILL_03</div>
-                <h3 class="text-2xl font-bold mb-3">Brand Transformer</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Guardian of voice. Automatically polishes content to your exact brand tone.</p>
+                <h3 class="text-2xl font-bold mb-3">Enhanced Dashboard</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Create in seconds html sharable data dashboards.</p>
             </a>
 
             <!-- Skill 4 -->
@@ -59,11 +97,39 @@
             </a>
 
             <!-- Skill 5 -->
-            <a href="trend.html" class="card-glow p-10 bg-zinc-950 border border-white/10 rounded-3xl transition-all duration-300">
+            <a href="slides.html" class="card-glow p-10 bg-zinc-950 border border-white/10 rounded-3xl transition-all duration-300">
                 <div class="text-blue-500 font-mono text-xs mb-8">SKILL_05</div>
-                <h3 class="text-2xl font-bold mb-3">Trend Sentinel</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Predictive analysis of emerging market signals and buzzwords.</p>
+                <h3 class="text-2xl font-bold mb-3">McKinsey Style Slides</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Structure your slides with best of classes frameworks and logic.</p>
             </a>
+
+
+            <!-- Skill 6: Contact -->
+                    <div onclick="copyEmail()" class="cursor-pointer card-glow p-10 bg-blue-600/10 border border-blue-500/30 rounded-3xl transition-all duration-300 group">
+                        <div class="text-blue-400 font-mono text-xs mb-8 tracking-widest">GET_IN_TOUCH</div>
+                        <h3 class="text-2xl font-bold mb-3 group-hover:text-blue-400 transition">Need your own skill?</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Click to copy our email and speak directly with us.</p>
+                        <div class="mt-6 text-blue-500 font-bold text-xs uppercase tracking-widest">info@skills10x.ai</div>
+                    </div>
+
+                </div>
+            </main>
+
+            <script>
+                function copyEmail() {
+                    const email = "hello@skills10x.com";
+                    navigator.clipboard.writeText(email).then(() => {
+                        showToast();
+                    });
+                }
+
+                function showToast() {
+                    var x = document.getElementById("toast");
+                    x.className = "show";
+                    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+                }
+            </script>
+
 
         </div>
     </main>

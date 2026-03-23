@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Dashboard | skills10x</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style> 
+        body { font-family: 'Inter', sans-serif; background: #000; color: #fff; } 
+        .glass-card { background: rgba(9, 9, 11, 0.8); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-black">
+    <nav class="p-6 border-b border-white/5 flex justify-between items-center">
+        <a href="index.html" class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-colors">← Back to Hub</a>
+        <div class="text-xl font-black italic">SKILLS<span class="text-blue-500">10X</span></div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 py-16">
+        <h1 class="text-5xl font-bold mb-12">Enhanced Dashboard</h1>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+            <div class="bg-zinc-900 aspect-video rounded-3xl flex items-center justify-center border border-white/10 overflow-hidden relative group">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/HoWEifYclWc?si=Xa6bIHncB-gHvBKb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="bg-zinc-950 p-8 rounded-3xl border border-white/10 shadow-2xl overflow-hidden relative flex flex-col justify-between">
+                <div>
+                    <p class="text-[10px] text-blue-500 font-bold uppercase mb-6 tracking-widest">Dashboard Configuration</p>
+                    
+                    <div class="space-y-5">
+                        <div>
+                            <label class="text-[10px] text-gray-500 uppercase mb-2 block font-bold">Target KPIs</label>
+                            <div class="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-3 text-xs text-gray-300 ring-1 ring-white/5">
+                                ROAS, Customer Acquisition Cost, Retention Rate
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="text-[10px] text-gray-500 uppercase mb-2 block font-bold">Analysis Context</label>
+                            <div class="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-3 text-xs text-gray-400 italic leading-relaxed">
+                                "Compare this month's performance against Q4 2025. Highlight any anomalies in ad spend vs. conversion volume."
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="text-[10px] text-gray-500 uppercase mb-2 block font-bold">Preferred Visualizations</label>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1.5 bg-blue-500/10 border border-blue-500/30 text-blue-400 text-[10px] font-bold rounded-md">Stacked Bar Chart</span>
+                                <span class="px-3 py-1.5 bg-blue-500/10 border border-blue-500/30 text-blue-400 text-[10px] font-bold rounded-md">Heatmap</span>
+                                <span class="px-3 py-1.5 bg-white/5 border border-white/10 text-gray-500 text-[10px] rounded-md cursor-pointer hover:bg-white/10 transition-colors">+ Add Chart</span>
+                            </div>
+                        </div>
+
+                        <button class="w-full py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs rounded-xl transition-all shadow-lg shadow-blue-500/20 active:scale-95">
+                            GENERATE RESPONSIVE REPORT
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="mt-8 p-4 bg-blue-500/5 border border-blue-500/20 rounded-xl">
+                    <div class="flex items-center gap-3">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                        <p class="text-xs text-blue-200 italic font-medium">Ready: Upload CSV/JSON to launch engine.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 py-12 border-t border-white/10">
+            <div>
+                <h4 class="text-blue-500 text-xs font-bold uppercase mb-4 tracking-wider">Goal</h4>
+                <p class="text-gray-400 text-sm leading-relaxed">From Raw Data to Insight in Seconds.</p>
+            </div>
+            <div>
+                <h4 class="text-blue-500 text-xs font-bold uppercase mb-4 tracking-wider">Description</h4>
+                <p class="text-gray-400 text-sm leading-relaxed">Automated engine that ingests messy reports and generates fully responsive HTML dashboards with interactive logic.</p>
+            </div>
+            <div>
+                <h4 class="text-blue-500 text-xs font-bold uppercase mb-4 tracking-wider">Output</h4>
+                <p class="text-gray-400 text-sm leading-relaxed">Shareable Analytics Dashboards with automated executive summaries.</p>
+            </div>
+            <div>
+                <h4 class="text-blue-500 text-xs font-bold uppercase mb-4 tracking-wider">Business Value</h4>
+                <p class="text-gray-400 text-sm font-bold text-white leading-relaxed">Eliminates manual reporting hours and visualizes ROI instantly for stakeholders.</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-zinc-800 text-white px-6 py-3 rounded-full border border-white/10 shadow-2xl opacity-0 transition-opacity duration-300 pointer-events-none text-xs font-bold">
+        Email copied to clipboard!
+    </div>
+
+</body>
+</html>
